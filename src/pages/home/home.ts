@@ -6,13 +6,15 @@ import { ComisionesDeFomentosPage } from '../comisiones-de-fomentos/comisiones-d
 import { ParajesPage } from '../parajes/parajes';
 import { UrgenciasPage } from '../urgencias/urgencias';
 
+import {AbstractItemsProvider} from '../../providers/abstract-items/abstract-items';
+
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController, AbstractItemsProvider:AbstractItemsProvider) {
   }
   goToROGallegos(params){
     if (!params) params = {};

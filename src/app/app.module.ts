@@ -17,6 +17,13 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { AbstractItemsProvider } from '../providers/abstract-items/abstract-items';
 
+//Imports Ionic
+import { AndroidPermissions } from '@ionic-native/android-permissions';
+import {CallNumber} from '@ionic-native/call-number';
+
+//Imports Angular
+import { HttpClientModule, HttpClient } from '@angular/common/http';
+
 @NgModule({
   declarations: [
     MyApp,
@@ -33,7 +40,8 @@ import { AbstractItemsProvider } from '../providers/abstract-items/abstract-item
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    HttpClientModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -53,7 +61,10 @@ import { AbstractItemsProvider } from '../providers/abstract-items/abstract-item
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    AbstractItemsProvider
+    AbstractItemsProvider, //Provider agregado automaticamente
+    AndroidPermissions,
+    HttpClientModule,
+    CallNumber
   ]
 })
 export class AppModule {}
