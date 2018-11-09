@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 //import { ROGallegosPage } from '../r-ogallegos/r-ogallegos';
+import { MostrarTelefonosPage } from '../mostrar-telefonos/mostrar-telefonos';
 
 import {AbstractItemsProvider} from '../../providers/abstract-items/abstract-items';
 
@@ -32,6 +33,8 @@ export class ROGallegosPage {
   asign_cat(id_cat){
     this.provider.setCategoria(id_cat);
     console.log(this.provider.getCategoria())
+    this.navCtrl.push(MostrarTelefonosPage);
+
   }
   /*
   goToROGallegos(params){

@@ -12,6 +12,7 @@ import { MunicipiosPage } from '../pages/municipios/municipios';
 import { ComisionesDeFomentosPage } from '../pages/comisiones-de-fomentos/comisiones-de-fomentos';
 import { ParajesPage } from '../pages/parajes/parajes';
 import { UrgenciasPage } from '../pages/urgencias/urgencias';
+import { MostrarTelefonosPage } from '../pages/mostrar-telefonos/mostrar-telefonos';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -36,7 +37,8 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
     MunicipiosPage,
     ComisionesDeFomentosPage,
     ParajesPage,
-    UrgenciasPage
+    UrgenciasPage,
+    MostrarTelefonosPage
   ],
   imports: [
     BrowserModule,
@@ -55,7 +57,8 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
     MunicipiosPage,
     ComisionesDeFomentosPage,
     ParajesPage,
-    UrgenciasPage
+    UrgenciasPage,
+    MostrarTelefonosPage
   ],
   providers: [
     StatusBar,

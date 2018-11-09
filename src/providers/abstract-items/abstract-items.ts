@@ -13,6 +13,7 @@ export class AbstractItemsProvider {
   Localidad_id:number;
   Categoria_id:number;
   lastName: string;
+  ip_carpeta = 'http://localhost/Atajos/';
   ip_wamp = 'http://localhost/Atajos/get_telefonos.php';
 
   constructor(public http: HttpClient) {
@@ -55,7 +56,7 @@ export class AbstractItemsProvider {
       {
         console.log(this.ip_wamp);
         console.log("No encontro");
-        this.ip_wamp = prompt("No se encontro el servidor", "http://localhost/Atajos/get_telefonos.php");
+        this.ip_wamp = prompt("No se encontro el servidor", "http://192.168.0.5/Atajos/get_telefonos.php");
         this.probar_conexion();
         // "http://xxx.xxx.x.xxx/pruebas/Ionic/prueba.php"
       });
