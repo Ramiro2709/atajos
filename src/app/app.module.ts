@@ -13,7 +13,6 @@ import { ComisionesDeFomentosPage } from '../pages/comisiones-de-fomentos/comisi
 import { ParajesPage } from '../pages/parajes/parajes';
 import { UrgenciasPage } from '../pages/urgencias/urgencias';
 
-
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { AbstractItemsProvider } from '../providers/abstract-items/abstract-items';
