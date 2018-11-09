@@ -64,7 +64,8 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
     AbstractItemsProvider, //Provider agregado automaticamente
     AndroidPermissions,
     HttpClientModule,
-    CallNumber
+    CallNumber,
+    HttpClient
   ]
 })
 export class AppModule {}

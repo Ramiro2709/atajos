@@ -13,13 +13,23 @@ import {AbstractItemsProvider} from '../../providers/abstract-items/abstract-ite
   templateUrl: 'home.html'
 })
 export class HomePage {
-
-  constructor(public navCtrl: NavController, AbstractItemsProvider:AbstractItemsProvider) {
+  //prueba : string;
+  //AbstractItemsProvider:AbstractItemsProvider;
+  localidad : number;
+  constructor(public navCtrl: NavController, private provider:AbstractItemsProvider) {
+    //this.prueba = AbstractItemsProvider.getUserName();
+    //console.log(this.prueba);
   }
+
   goToROGallegos(params){
+    //this.localidad = this.AbstractItemsProvider.setLocalidad();
+    this.provider.setLocalidad(29);
+
     if (!params) params = {};
     this.navCtrl.push(ROGallegosPage);
-  }goToMunicipios(params){
+  }
+  
+  goToMunicipios(params){
     if (!params) params = {};
     this.navCtrl.push(MunicipiosPage);
   }goToComisionesDeFomentos(params){
