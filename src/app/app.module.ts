@@ -13,6 +13,7 @@ import { ComisionesDeFomentosPage } from '../pages/comisiones-de-fomentos/comisi
 import { ParajesPage } from '../pages/parajes/parajes';
 import { UrgenciasPage } from '../pages/urgencias/urgencias';
 import { MostrarTelefonosPage } from '../pages/mostrar-telefonos/mostrar-telefonos';
+import { DetallesPage } from '../pages/detalles/detalles';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -38,7 +39,8 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
     ComisionesDeFomentosPage,
     ParajesPage,
     UrgenciasPage,
-    MostrarTelefonosPage
+    MostrarTelefonosPage,
+    DetallesPage 
   ],
   imports: [
     BrowserModule,
@@ -58,7 +60,8 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
     ComisionesDeFomentosPage,
     ParajesPage,
     UrgenciasPage,
-    MostrarTelefonosPage
+    MostrarTelefonosPage,
+    DetallesPage 
   ],
   providers: [
     StatusBar,

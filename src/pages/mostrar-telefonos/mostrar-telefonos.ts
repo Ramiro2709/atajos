@@ -6,6 +6,8 @@ import {AbstractItemsProvider} from '../../providers/abstract-items/abstract-ite
 import { HttpClient } from '@angular/common/http';
 import { HttpHeaders } from '@angular/common/http';
 
+import { DetallesPage } from '../detalles/detalles';
+
 /**
  * Generated class for the MostrarTelefonosPage page.
  *
@@ -78,6 +80,13 @@ export class MostrarTelefonosPage {
     {
 
     });
-  }
+  } //Fin
 
+  ver_detalles(item){
+    //alert(item.text);
+    console.log(item);
+    this.navCtrl.push(DetallesPage, { //Que vaya a pagina detalles
+      item:item
+    });
+  }
 }

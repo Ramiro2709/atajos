@@ -15,7 +15,7 @@
 
 <ion-content padding>
   <ion-list>
-    <button ion-item *ngFor="let item of items">
+    <button ion-item *ngFor="let item of items" (click)="ver_detalles(item)">
       {{item.nombre}}
     </button>  
   </ion-list>
