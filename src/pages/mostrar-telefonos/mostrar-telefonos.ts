@@ -71,7 +71,7 @@ export class MostrarTelefonosPage {
           //console.log(items);
         
       } //Fin For
-      alert(this.items[0]['nombre']);
+      //alert(this.items[0]['nombre']);
     },
     (error : any) =>
     {
