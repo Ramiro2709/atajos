@@ -11,6 +11,7 @@ import { Injectable } from '@angular/core';
 export class AbstractItemsProvider {
 
   Localidad_id:number;
+  Localidad_Nombre:string;
   Categoria_id:number;
   lastName: string;
   ip_carpeta = 'http://localhost/Atajos/';

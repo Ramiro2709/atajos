@@ -3,6 +3,7 @@ import { NavController } from 'ionic-angular';
 import { HttpClient } from '@angular/common/http'; //// Para que tome al php
 import { HttpHeaders } from '@angular/common/http';
 import {AbstractItemsProvider} from '../../providers/abstract-items/abstract-items';
+import { ROGallegosPage } from '../r-ogallegos/r-ogallegos';
 
 @Component({
   selector: 'page-municipios',
@@ -28,6 +29,7 @@ export class MunicipiosPage {
               id_municipio: data[i]['id_municipio'],
               id: i
             });  
+            console.log(this.items[i]['id_municipio']);
         } //Fin For
       },
       (error : any) =>
@@ -36,8 +38,11 @@ export class MunicipiosPage {
       });
   } //Fin constructor
 
-  ver_municipio(){
-
+  ver_municipio(municipio,nombre){
+    console.log("ID municipio seleccionado: "+municipio);
+    this.provider.Localidad_id = municipio;
+    this.provider.Localidad_Nombre = nombre;
+    this.navCtrl.push(ROGallegosPage);
   }
   
 }

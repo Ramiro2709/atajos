@@ -9,7 +9,7 @@
   </ion-navbar>
 </ion-header>
 <ion-content padding id="page7">
-  <button ion-item *ngFor="let item of items" (click)="ver_municipio(item.id_municipio)">
+  <button ion-button outline color="assertive" full large style="font-size:20px;" *ngFor="let item of items" (click)="ver_municipio(item.id_municipio,item.nombre)" >
     {{item.nombre}}
   </button>
 </ion-content>
