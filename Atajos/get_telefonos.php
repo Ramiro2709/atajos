@@ -7,9 +7,16 @@
     $request = json_decode($postdata);
     $Localidad = $request->localidad;
     $Categoria = $request->categoria;
+    $tipo_localidad = $request->tipo_localidad;
     //echo json_encode($Localidad);
 
-    $telefono = mysql_query("SELECT * FROM telefonos WHERE id_localidad = '$Localidad' AND id_categoria='$Categoria' ");
+    if ($tipo_localidad <= 2)
+    {
+        $sql = "SELECT * FROM telefonos WHERE id_localidad = '$Localidad' AND id_categoria='$Categoria' ";
+    } else{
+        $sql = "SELECT * FROM telefonos WHERE id_localidad = '$Localidad'";
+    }
+    $telefono = mysql_query($sql);
    
     $array_telefono_php = array(); 
     

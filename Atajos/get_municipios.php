@@ -2,7 +2,11 @@
 
     include "conexion.php";
 
-    $municipios = mysql_query("SELECT * FROM localidades WHERE tipo_localidad = '2' ");
+    $postdata = file_get_contents("php://input");
+    $request = json_decode($postdata);
+    $tipo_localidad = $request->tipo_localidad;
+
+    $municipios = mysql_query("SELECT * FROM localidades WHERE tipo_localidad = '$tipo_localidad' ");
    
     $array_municipios_php = array(); 
     
