@@ -48,15 +48,26 @@ export class HomePage {
   }
   
   goToMunicipios(params){
+    this.provider.Tipo_localidad = 2;
     if (!params) params = {};
     this.navCtrl.push(MunicipiosPage);
-  }goToComisionesDeFomentos(params){
+  }
+  goToComisionesDeFomentos(params){
+    this.provider.Tipo_localidad = 3;
     if (!params) params = {};
-    this.navCtrl.push(ComisionesDeFomentosPage);
-  }goToParajes(params){
+    this.navCtrl.push(MunicipiosPage);
+  }
+  goToParajes(params){
+    this.provider.Tipo_localidad = 4;
     if (!params) params = {};
-    this.navCtrl.push(ParajesPage);
-  }goToUrgencias(params){
+    this.navCtrl.push(MunicipiosPage);
+  }
+  goToOtros(params){
+    this.provider.Tipo_localidad = 5;
+    if (!params) params = {};
+    this.navCtrl.push(MunicipiosPage);
+  }
+  goToUrgencias(params){
     if (!params) params = {};
     this.navCtrl.push(UrgenciasPage);
   }

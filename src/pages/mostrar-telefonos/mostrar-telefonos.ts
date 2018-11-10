@@ -46,7 +46,8 @@ export class MostrarTelefonosPage {
     this.items = [];
     var datos_consulta = JSON.stringify({
       localidad: this.provider.Localidad_id,
-      categoria: this.provider.Categoria_id
+      categoria: this.provider.Categoria_id,
+      tipo_localidad: this.provider.Tipo_localidad
     });
     var ip_gettelefonos = this.provider.ip_carpeta+"get_telefonos.php";
 

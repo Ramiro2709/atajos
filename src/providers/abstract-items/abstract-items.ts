@@ -12,6 +12,7 @@ export class AbstractItemsProvider {
 
   Localidad_id:number;
   Localidad_Nombre:string;
+  Tipo_localidad:number;
   Categoria_id:number;
   lastName: string;
   ip_carpeta = 'http://localhost/Atajos/';
