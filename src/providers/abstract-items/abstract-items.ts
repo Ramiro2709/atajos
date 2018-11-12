@@ -47,18 +47,19 @@ export class AbstractItemsProvider {
   }  
 
   probar_conexion(){
-    this.http.get(this.ip_wamp)
+    var prueba_conexion =  this.ip_carpeta + "conexion.php";
+    this.http.get(prueba_conexion)
     .subscribe((data : any) =>
       {
-        console.log(this.ip_wamp);
+        console.log(prueba_conexion);
         console.log("Encontro IP");
 
       },
       (error : any) =>
       {
-        console.log(this.ip_wamp);
+        console.log(prueba_conexion);
         console.log("No encontro");
-        this.ip_wamp = prompt("No se encontro el servidor", "http://192.168.0.5/Atajos/get_telefonos.php");
+        this.ip_carpeta = prompt("No se encontro el servidor", "http://192.168.0.19/Atajos/");
         this.probar_conexion();
         // "http://xxx.xxx.x.xxx/pruebas/Ionic/prueba.php"
       });
