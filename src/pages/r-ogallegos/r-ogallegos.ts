@@ -31,8 +31,12 @@ export class ROGallegosPage {
   }// Fin constructor
 
   asign_cat(id_cat){
+    /*
     this.provider.setCategoria(id_cat);
     console.log(this.provider.getCategoria())
+    */
+    this.provider.Categoria_id = id_cat;
+    console.log(this.provider.Categoria_id);
     this.navCtrl.push(MostrarTelefonosPage);
 
   }

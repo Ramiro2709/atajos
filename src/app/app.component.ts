@@ -10,6 +10,8 @@ import { ParajesPage } from '../pages/parajes/parajes';
 import { UrgenciasPage } from '../pages/urgencias/urgencias';
 import { HomePage } from '../pages/home/home';
 
+import { TabsControllerPage } from '../pages/tabs-controller/tabs-controller';
+
 import { AndroidPermissions } from '@ionic-native/android-permissions';
 
 @Component({
@@ -17,7 +19,7 @@ import { AndroidPermissions } from '@ionic-native/android-permissions';
 })
 export class MyApp {
   @ViewChild(Nav) navCtrl: Nav;
-    rootPage:any = HomePage;
+    rootPage:any = TabsControllerPage;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen,  androidPermissions: AndroidPermissions) {
     platform.ready().then(() => {

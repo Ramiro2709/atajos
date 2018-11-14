@@ -42,6 +42,7 @@ export class HomePage {
     //this.localidad = this.AbstractItemsProvider.setLocalidad();
     //this.provider.setLocalidad(29);
     this.provider.Localidad_id = 29;
+    this.provider.Tipo_localidad = 1;
     this.provider.Localidad_Nombre = "Rio Gallegos";
     if (!params) params = {};
     this.navCtrl.push(ROGallegosPage);

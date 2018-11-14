@@ -11,7 +11,7 @@ export class UrgenciasPage {
   constructor(public navCtrl: NavController, private CallNumber:CallNumber) {
   }
 
-  Llamar_Andrea(numero){
+  Llamar(numero){
     this.CallNumber.callNumber(numero,true)
     .then(res => console.log("Funco",res))
     .catch(err => console.log("No Funco",err))

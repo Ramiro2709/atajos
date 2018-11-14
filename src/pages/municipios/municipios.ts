@@ -16,54 +16,28 @@ export class MunicipiosPage {
   constructor(public navCtrl: NavController,  public http: HttpClient,  private provider:AbstractItemsProvider) {
     this.items = [];
     var ip_getmunicipios = this.provider.ip_carpeta+"get_municipios.php";
-
-    console.log(ip_getmunicipios);
-    /*
-    this.http.get(ip_getmunicipios)
+    var longitud : any;
+    var datos_consulta = JSON.stringify({
+    tipo_localidad: this.provider.Tipo_localidad, //municipo, paraje, etc
+    });
+    this.http
+    .post<string>(ip_getmunicipios,datos_consulta)
     .subscribe((data : any) =>
-      {
-        this.longitud = data['lenght'];
-        console.log(this.longitud);
-        for(let i = 0; i < this.longitud; i++){
-          //console.log(data[i][0]);
-            this.items.push({
-              nombre: data[i]['nombre_municipio'],
-              id_municipio: data[i]['id_municipio'],
-              id: i
-            });  
-            console.log(this.items[i]['id_municipio']);
-        } //Fin For
-      },
-      (error : any) =>
-      {
-        
-      });
-      */
-     var longitud : any;
-     var datos_consulta = JSON.stringify({
-      tipo_localidad: this.provider.Tipo_localidad, //municipo, paraje, etc
-      });
+    {
+      this.longitud = data['lenght'];
+      for(let i = 0; i < this.longitud; i++){
+        //console.log(data[i][0]);
+          this.items.push({
+            nombre: data[i]['nombre_municipio'],
+            id_municipio: data[i]['id_municipio'],
+            id: i
+          });  
+      } //Fin For
+    },
+    (error : any) =>
+    {
 
-      this.http
-      .post<string>(ip_getmunicipios,datos_consulta)
-      .subscribe((data : any) =>
-      {
-        this.longitud = data['lenght'];
-        console.log(this.longitud);
-        for(let i = 0; i < this.longitud; i++){
-          //console.log(data[i][0]);
-            this.items.push({
-              nombre: data[i]['nombre_municipio'],
-              id_municipio: data[i]['id_municipio'],
-              id: i
-            });  
-            console.log(this.items[i]['id_municipio']);
-        } //Fin For
-      },
-      (error : any) =>
-      {
-  
-      });
+    });
 
   } //Fin constructor
 
