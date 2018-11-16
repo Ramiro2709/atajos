@@ -22,7 +22,7 @@ export class DetallesPage {
 
   Llamar(numero){
     console.log(numero);
-    console.log("prueba git");
+    console.log("prueba git 3");
     this.CallNumber.callNumber(numero,true)
     .then(res => console.log("Funco",res))
     .catch(err => console.log("No Funco",err))
