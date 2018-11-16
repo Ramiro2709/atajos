@@ -2,12 +2,6 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import {CallNumber} from '@ionic-native/call-number';
 
-/**
- * Generated class for the DetallesPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
 
 @IonicPage()
 @Component({
@@ -16,13 +10,14 @@ import {CallNumber} from '@ionic-native/call-number';
 })
 export class DetallesPage {
   item: any;
+
   constructor(public navCtrl: NavController, public navParams: NavParams, private CallNumber:CallNumber) {
     this.item = navParams.get('item');
     console.log(this.item);
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad DetallesPage');
+    console.log('Pagina: Detalles');
   }
 
   Llamar(numero){
@@ -32,4 +27,6 @@ export class DetallesPage {
     .catch(err => console.log("No Funco",err))
   }
 
+ 
 }
+

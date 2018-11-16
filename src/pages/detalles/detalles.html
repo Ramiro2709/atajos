@@ -15,7 +15,7 @@
 
 <ion-content padding>
   <h2>{{item.direccion}}</h2>
-  <h2>{{item.telefono}}</h2>
+  <h2 on-click="Llamar(item.telefono)">{{item.telefono}}</h2>
   <a href="{{item.pagina}}">{{item.pagina}}</a>
   <h2>{{item.imagen}}</h2>
 </ion-content>
